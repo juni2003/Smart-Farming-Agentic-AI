@@ -10,7 +10,7 @@ An end‑to‑end, agentic AI system that combines **crop recommendation**, **pl
 
 **🚀 Double-click `START.bat` to launch the application!**
 
-[View Demo](#demo) • [Quick Start](#quick-start) • [Features](#features) • [Docs](#documentation)
+[View Demo](#demo)
 
 </div>
 ---
