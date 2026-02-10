@@ -1,0 +1,82 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    ✅ CONNECTION FIX - READY!                             ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+🔴 PROBLEM:
+───────────
+Frontend: http://localhost:3000
+Backend:  http://localhost:5000
+Error:    "failed to fetch" - Frontend trying to use port 8000
+
+🟢 SOLUTION APPLIED:
+──────────────────
+✅ Updated frontend/lib/api.ts (port 8000 → 5000)
+✅ Created frontend/.env.local with correct URL
+✅ Both servers now aligned on same ports
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                         🚀 NEXT STEPS (DO THIS!)                         ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+OPTION A: Fast Fix (Recommended) ⭐
+─────────────────────────────────
+
+1. Look in: c:\Users\LAPTOP CLINIC\Documents\Projects\smart-farming-advisor\
+
+2. Find and DOUBLE-CLICK: RESTART_FRONTEND.bat
+
+3. Wait until you see:
+   "Starting frontend on http://localhost:3000"
+
+4. Open browser: http://localhost:3000
+
+5. Test any tool (crop, disease, qa)
+
+6. Should work now! ✨
+
+
+OPTION B: Manual Fix
+────────────────────
+
+1. Stop frontend (Ctrl+C in terminal)
+
+2. In terminal, run:
+   cd frontend
+   npm install
+   npm run dev
+
+3. Open browser: http://localhost:3000
+
+4. Test tools
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                         ✅ VERIFY IT WORKS                               ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+1. Frontend: http://localhost:3000 (should load) ✅
+2. Backend:  http://localhost:5000/health (try in browser) ✅
+3. Try Crop Tool: Fill form → Click button → See results ✅
+
+If you see results instead of "failed to fetch" → SUCCESS! 🎉
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                         📋 WHAT CHANGED                                  ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+File Changed:  frontend/lib/api.ts
+Line 1:
+   OLD: const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+   NEW: const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5000";
+
+File Created:  frontend/.env.local
+Content:
+   NEXT_PUBLIC_API_BASE=http://localhost:5000
+
+═══════════════════════════════════════════════════════════════════════════════
+
+That's it! Just restart frontend and it should work perfectly! 🌾
+
+═══════════════════════════════════════════════════════════════════════════════

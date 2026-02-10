@@ -1,0 +1,37 @@
+{
+  "model_name": "ResNet50",
+  "test_accuracy": 0.9896640826873385,
+  "val_accuracy": 0.9899870801033592,
+  "train_time_minutes": 33.09641165335973,
+  "num_classes": 15,
+  "classes": [
+    "Pepper__bell___Bacterial_spot",
+    "Pepper__bell___healthy",
+    "Potato___Early_blight",
+    "Potato___Late_blight",
+    "Potato___healthy",
+    "Tomato_Bacterial_spot",
+    "Tomato_Early_blight",
+    "Tomato_Late_blight",
+    "Tomato_Leaf_Mold",
+    "Tomato_Septoria_leaf_spot",
+    "Tomato_Spider_mites_Two_spotted_spider_mite",
+    "Tomato__Target_Spot",
+    "Tomato__Tomato_YellowLeaf__Curl_Virus",
+    "Tomato__Tomato_mosaic_virus",
+    "Tomato_healthy"
+  ],
+  "image_size": [
+    224,
+    224
+  ],
+  "epochs_trained": 15,
+  "config": {
+    "img_size": 224,
+    "batch_size": 64,
+    "epochs": 15,
+    "learning_rate": 0.0001,
+    "num_workers": 2
+  },
+  "training_date": "2025-11-17"
+}

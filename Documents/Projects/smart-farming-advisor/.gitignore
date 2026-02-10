@@ -1,0 +1,53 @@
+# Environment
+.env
+.env.*
+venv/
+env/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large data files (too big for GitHub)
+data/raw/
+data/processed/
+
+# Large model files (use Git LFS or provide download link)
+models/*.pth
+models/*.pt
+models/*.pkl
+models/*.onnx
+models/*.index
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+temp/
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+
+# Python caches
+.pytest_cache/
+.mypy_cache/
+
+# Outputs and uploads
+outputs/
+uploads/
+
+# Notebook checkpoints
+.ipynb_checkpoints/

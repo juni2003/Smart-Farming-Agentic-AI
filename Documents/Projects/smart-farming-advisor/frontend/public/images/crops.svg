@@ -1,0 +1,15 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="480" rx="32" fill="#F3FBF5"/>
+  <circle cx="520" cy="100" r="60" fill="#FFE48A"/>
+  <path d="M80 360C140 320 220 320 280 360C340 400 420 400 560 340V480H80V360Z" fill="#C0EFD1"/>
+  <path d="M120 380C160 340 200 340 240 380C280 420 320 420 360 380C400 340 440 340 520 380V480H120V380Z" fill="#8EE0B0"/>
+  <path d="M180 340C180 300 200 260 240 240C260 280 260 320 240 360C220 360 200 350 180 340Z" fill="#32B965"/>
+  <path d="M280 330C280 290 300 250 340 230C360 270 360 310 340 350C320 350 300 340 280 330Z" fill="#239550"/>
+  <path d="M380 340C380 300 400 260 440 240C460 280 460 320 440 360C420 360 400 350 380 340Z" fill="#1D7641"/>
+  <rect x="150" y="120" width="140" height="80" rx="16" fill="#FFFFFF" stroke="#E2F7E9"/>
+  <text x="170" y="150" fill="#1D7641" font-size="16" font-family="Arial">Soil Health</text>
+  <text x="170" y="175" fill="#1D7641" font-size="24" font-family="Arial">92%</text>
+  <rect x="340" y="150" width="160" height="90" rx="16" fill="#FFFFFF" stroke="#E2F7E9"/>
+  <text x="360" y="182" fill="#1D7641" font-size="16" font-family="Arial">Crop Fit</text>
+  <text x="360" y="210" fill="#1D7641" font-size="24" font-family="Arial">Rice</text>
+</svg>
