@@ -1,7 +1,18 @@
 # 🌾 Smart Farming Advisor (Full‑Stack) — Agentic AI for Precision Agriculture
 
 An end‑to‑end, agentic AI system that combines **crop recommendation**, **plant disease detection**, and **farming Q&A** — now with a modern **Next.js + Tailwind** frontend and a **Flask** API backend.
+<div align="center">
 
+![Status](https://img.shields.io/badge/Status-Ready%20to%20Run-success)
+![Backend](https://img.shields.io/badge/Backend-Flask-blue)
+![Frontend](https://img.shields.io/badge/Frontend-Next.js%2014-black)
+![AI](https://img.shields.io/badge/AI-ML%20%7C%20DL%20%7C%20RAG-orange)
+
+**🚀 Double-click `START.bat` to launch the application!**
+
+[View Demo](#demo) • [Quick Start](#quick-start) • [Features](#features) • [Docs](#documentation)
+
+</div>
 ---
 
 ## ✨ Highlights
@@ -25,11 +36,45 @@ An end‑to‑end, agentic AI system that combines **crop recommendation**, **pl
 
 ---
 
-## 🧭 System Architecture (High‑Level)
+
+## 📊 System Architecture
 
 ```
-User → Next.js Frontend → Flask API → Agent Router → Tool (Crop / Disease / RAG)
+┌─────────────┐
+│   Browser   │  ← User Interface
+└──────┬──────┘
+       │ HTTP
+       ▼
+┌──────────────────┐
+│  Next.js (3000)  │  ← Frontend
+│  - Pages         │
+│  - Components    │
+│  - API Client    │
+└──────┬───────────┘
+       │ REST API
+       ▼
+┌──────────────────┐
+│  Flask (5000)    │  ← Backend
+│  - Agent Router  │
+│  - API Endpoints │
+└──────┬───────────┘
+       │
+       ├──────────┬─────────────┬──────────┐
+       ▼          ▼             ▼          │
+  ┌────────┐ ┌─────────┐  ┌─────────┐    │
+  │  Crop  │ │ Disease │  │   RAG   │    │
+  │  Tool  │ │  Tool   │  │   Tool  │    │
+  └────┬───┘ └────┬────┘  └────┬────┘    │
+       │          │             │         │
+       ▼          ▼             ▼         ▼
+  ┌────────────────────────────────────────┐
+  │          Trained ML Models             │
+  │  - crop_model.pkl                      │
+  │  - disease_model_resnet50.pth          │
+  │  - faq_vector_store.index              │
+  └────────────────────────────────────────┘
 ```
+
 
 ---
 
@@ -48,34 +93,31 @@ User → Next.js Frontend → Flask API → Agent Router → Tool (Crop / Diseas
 
 ---
 
-## 🚀 Quick Start (Local)
 
-### 1) Backend (Flask API)
+## 🚀 Quick Start
 
+### Option 1: One-Click Start (Recommended)
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+Double-click: START.bat
+```
+This opens two terminals and starts both servers automatically!
 
-# Start the API server
+### Option 2: Manual Start
+
+**Terminal 1 - Backend:**
+```bash
+cd "c:\Users\LAPTOP CLINIC\Documents\Projects\smart-farming-advisor"
 python app.py
 ```
 
-The API runs on **http://localhost:5000**
-
-### 2) Frontend (Next.js)
-
+**Terminal 2 - Frontend:**
 ```bash
-# Navigate to frontend directory
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start the dev server
+cd "c:\Users\LAPTOP CLINIC\Documents\Projects\smart-farming-advisor\frontend"
+npm install  # First time only
 npm run dev
 ```
 
-The UI runs on **http://localhost:3000**
+**Access:** http://localhost:3000
 
 ---
 
