@@ -13,7 +13,7 @@ An end‑to‑end, agentic AI system that combines **crop recommendation**, **pl
 [View Demo](#demo)
 
 </div>
----
+
 
 ## ✨ Highlights
 
