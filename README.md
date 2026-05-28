@@ -235,7 +235,7 @@ This repo intentionally ignores:
 - Frontend build artifacts (`frontend/.next`, `frontend/node_modules`)
 - Outputs and uploads (`outputs/`, `uploads/`)
 
-**For large model files**, use Git LFS or provide download links in the repository.
+**Remember to add all these files by yourself**, If you need any help running this project contact me at email.
 
 ---
 
