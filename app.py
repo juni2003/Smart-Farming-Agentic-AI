@@ -33,6 +33,15 @@ ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png', 'JPG', 'JPEG', 'PNG'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+API_KEY = os.getenv("API_KEY")
+
+@app.before_request
+def require_api_key():
+    if request.endpoint != 'health_check':
+        key = request.headers.get('X-API-Key')
+        if not key or key != API_KEY:
+            return jsonify({"error": "Unauthorized"}), 401
+
 # Initialize agent (will load on first request)
 agent = None
 agent_initialized = False
