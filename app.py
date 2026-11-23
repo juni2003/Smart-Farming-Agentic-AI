@@ -43,10 +43,16 @@ def init_agent():
     global agent, agent_initialized
     if not agent_initialized:
         print("\n🤖 Initializing Farming Agent...")
-        agent = FarmingAgent()
-        success = agent.initialize()
-        agent_initialized = success
-        return success
+        try:
+            agent = FarmingAgent()
+            success = agent.initialize()
+            agent_initialized = success
+            return success
+        except Exception as e:
+            print(f"Error initializing agent: {e}")
+            traceback.print_exc()
+            agent_initialized = False
+            return False
     return agent_initialized
 
 
