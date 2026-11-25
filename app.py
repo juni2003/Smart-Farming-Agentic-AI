@@ -44,13 +44,20 @@ def init_agent():
     if not agent_initialized:
         print("\n🤖 Initializing Farming Agent...")
         try:
-            agent = FarmingAgent()
-            success = agent.initialize()
-            agent_initialized = success
-            return success
+            temp_agent = FarmingAgent()
+            if temp_agent.initialize():
+                agent = temp_agent
+                agent_initialized = True
+                return True
+            else:
+                print("Agent initialization failed (returned False).")
+                agent = None
+                agent_initialized = False
+                return False
         except Exception as e:
             print(f"Error initializing agent: {e}")
             traceback.print_exc()
+            agent = None
             agent_initialized = False
             return False
     return agent_initialized
